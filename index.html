@@ -2379,154 +2379,7 @@ table td{border-bottom-color:rgba(0,191,255,.09) !important;color:#D7F1FA !impor
 }
 </style>
 
-<style id="supabase-auth-styles">
-/* =========================================================
-   SUPABASE AUTH LOGIN
-========================================================= */
-body.auth-pending .app{display:none !important;}
-#authScreen{
-  position:fixed;
-  inset:0;
-  z-index:99999;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  padding:24px;
-  background:
-    radial-gradient(circle at 18% 20%,rgba(0,191,255,.13),transparent 30%),
-    radial-gradient(circle at 82% 80%,rgba(0,140,140,.14),transparent 32%),
-    linear-gradient(135deg,#00111f,#001F3F 55%,#002941);
-}
-#authScreen.auth-hidden{display:none;}
-.auth-card{
-  width:min(430px,100%);
-  padding:34px;
-  border-radius:28px;
-  background:linear-gradient(145deg,rgba(6,43,70,.96),rgba(2,27,48,.98));
-  border:1px solid rgba(0,191,255,.25);
-  box-shadow:0 25px 80px rgba(0,0,0,.45),0 0 45px rgba(0,191,255,.08);
-  backdrop-filter:blur(18px);
-}
-.auth-logo{
-  width:64px;height:64px;
-  margin:0 auto 18px;
-  border-radius:20px;
-  display:flex;align-items:center;justify-content:center;
-  background:linear-gradient(135deg,#008C8C,#00BFFF);
-  color:#fff;
-  font-size:27px;
-  box-shadow:0 0 28px rgba(0,191,255,.25);
-}
-.auth-card h1{
-  text-align:center;
-  color:#fff;
-  font-size:25px;
-  font-weight:800;
-  letter-spacing:-.5px;
-}
-.auth-card .auth-subtitle{
-  text-align:center;
-  color:#8FB7C9;
-  font-size:10px;
-  line-height:1.6;
-  margin:8px 0 25px;
-}
-.auth-form-group{margin-bottom:14px;}
-.auth-form-group label{
-  display:block;
-  margin:0 0 7px 3px;
-  color:#A9D6E5;
-  font-size:9px;
-  font-weight:700;
-  letter-spacing:.3px;
-}
-.auth-input{
-  width:100%;
-  height:47px;
-  border-radius:13px;
-  border:1px solid rgba(0,191,255,.20);
-  background:rgba(0,20,40,.72);
-  color:#F4FCFF;
-  padding:0 14px;
-  outline:none;
-  font-family:"Montserrat",Arial,sans-serif;
-  font-size:11px;
-}
-.auth-input::placeholder{color:#648D9F;}
-.auth-input:focus{
-  border-color:#00BFFF;
-  box-shadow:0 0 0 3px rgba(0,191,255,.08),0 0 18px rgba(0,191,255,.08);
-}
-.auth-password-wrap{position:relative;}
-.auth-password-wrap .auth-input{padding-right:45px;}
-.auth-eye{
-  position:absolute;
-  right:8px;
-  top:7px;
-  width:34px;height:33px;
-  border:0;border-radius:9px;
-  background:rgba(0,191,255,.08);
-  color:#8FDDF0;
-  cursor:pointer;
-}
-.auth-remember{display:flex;align-items:center;gap:9px;margin:2px 0 3px;color:#8FB7C9;font-size:9px;line-height:1.4;}
-.auth-remember input{width:15px;height:15px;accent-color:#00BFFF;cursor:pointer;}
-.auth-remember strong{color:#DDF6FF;font-weight:700;}
-.auth-submit{
-  width:100%;
-  height:47px;
-  margin-top:7px;
-  border:0;
-  border-radius:13px;
-  background:linear-gradient(135deg,#008C8C,#00BFFF);
-  color:#fff;
-  font-family:"Montserrat",Arial,sans-serif;
-  font-size:11px;
-  font-weight:800;
-  cursor:pointer;
-  box-shadow:0 10px 25px rgba(0,191,255,.20);
-}
-.auth-submit:hover{filter:brightness(1.08);transform:translateY(-1px);}
-.auth-submit:disabled{opacity:.65;cursor:wait;transform:none;}
-.auth-message{
-  min-height:18px;
-  margin-top:13px;
-  text-align:center;
-  color:#FFB4B4;
-  font-size:9px;
-  line-height:1.5;
-}
-.auth-footer{
-  margin-top:20px;
-  padding-top:15px;
-  border-top:1px solid rgba(0,191,255,.12);
-  text-align:center;
-  color:#668FA1;
-  font-size:8px;
-}
-.auth-clinic-name{
-  color:#A9D6E5;
-  font-weight:700;
-}
-.auth-logout{
-  width:calc(100% - 10px);
-  margin:18px 5px 0;
-  border:1px solid rgba(255,110,110,.20);
-  background:rgba(255,80,80,.06);
-  color:#FFB4B4;
-  border-radius:12px;
-  padding:10px 12px;
-  font-family:inherit;
-  font-size:10px;
-  font-weight:700;
-  cursor:pointer;
-}
-.auth-logout:hover{background:rgba(255,80,80,.12);color:#fff;}
-@media(max-width:500px){
-  #authScreen{padding:16px;}
-  .auth-card{padding:27px 20px;border-radius:23px;}
-}
-</style>
+<!-- Authentication UI styles removed from this local-only clone. -->
 
 <style id="sciFiGrowthStyles">
 .holo-growth-panel{position:relative;overflow:hidden;margin:22px 0 26px;padding:22px 24px 18px;border:1px solid rgba(0,220,255,.78);border-radius:25px;background:radial-gradient(ellipse at 48% 0%,rgba(0,172,255,.14),transparent 52%),linear-gradient(135deg,rgba(3,25,47,.98),rgba(2,12,29,.98));box-shadow:0 0 0 1px rgba(0,195,255,.08),0 0 28px rgba(0,195,255,.12),inset 0 0 35px rgba(0,153,255,.06)}
@@ -2536,92 +2389,16 @@ body.auth-pending .app{display:none !important;}
 </style>
 
 
-<style id="holographic-iris-lock">
-#authScreen .auth-logo.iris-lock{position:relative;isolation:isolate;overflow:visible;width:92px;height:92px;margin:0 auto 24px;border-radius:50%;background:radial-gradient(circle at 50% 50%,rgba(0,224,255,.18),rgba(0,52,88,.58) 54%,rgba(2,12,27,.95) 73%);border:1px solid rgba(89,245,255,.85);box-shadow:0 0 0 7px rgba(0,213,255,.045),0 0 26px rgba(0,213,255,.32),inset 0 0 22px rgba(0,213,255,.18);font-size:0;animation:irisHover 4s ease-in-out infinite}
-#authScreen .iris-orbit{position:absolute;inset:7px;border:1px solid rgba(57,231,255,.8);border-radius:50%;box-shadow:0 0 10px rgba(0,217,255,.2)}
-#authScreen .orbit-one{border-left-color:transparent;border-right-color:rgba(106,111,255,.85);animation:irisSpin 8s linear infinite}
-#authScreen .orbit-two{inset:14px;border-top:2px solid #55f5ff;border-bottom:2px solid rgba(94,98,255,.8);border-left-color:transparent;border-right-color:transparent;animation:irisSpinReverse 5s linear infinite}
-#authScreen .iris-blade{position:absolute;left:50%;top:50%;width:27px;height:27px;margin:-13.5px;border:1.5px solid rgba(105,247,255,.95);border-radius:4px 14px 4px 14px;background:linear-gradient(135deg,rgba(0,230,255,.35),rgba(55,82,255,.16));transform-origin:50% 50%;box-shadow:inset 0 0 8px rgba(0,230,255,.24),0 0 8px rgba(0,217,255,.13)}
-#authScreen .blade-one{transform:rotate(0deg) translateY(-17px) rotate(45deg)}#authScreen .blade-two{transform:rotate(90deg) translateY(-17px) rotate(45deg)}#authScreen .blade-three{transform:rotate(180deg) translateY(-17px) rotate(45deg)}#authScreen .blade-four{transform:rotate(270deg) translateY(-17px) rotate(45deg)}
-#authScreen .iris-core{position:absolute;left:50%;top:50%;width:17px;height:17px;margin:-8.5px;border-radius:50%;background:radial-gradient(circle,#f3ffff 0%,#5af5ff 18%,#00bce9 48%,#3347c7 75%,transparent 78%);box-shadow:0 0 9px #00e5ff,0 0 24px rgba(0,217,255,.9);animation:irisPulse 2.5s ease-in-out infinite}
-#authScreen .iris-scanline{position:absolute;left:13px;right:13px;top:50%;height:1px;background:#a5ffff;box-shadow:0 0 8px #00e5ff;opacity:.45;animation:irisScan 2.8s ease-in-out infinite;pointer-events:none}
-#authScreen .iris-lock:after{content:'IRIS SECURITY';position:absolute;left:-12px;right:-12px;bottom:-23px;text-align:center;color:#67efff;font-size:7px;font-weight:800;letter-spacing:2.1px;text-shadow:0 0 9px rgba(0,217,255,.75)}
-#authScreen:has(.auth-input:focus) .iris-lock{box-shadow:0 0 0 8px rgba(0,213,255,.07),0 0 42px rgba(0,213,255,.58),inset 0 0 28px rgba(0,213,255,.28);border-color:#d8ffff}
-#authScreen:has(.auth-input:focus) .iris-orbit{animation-duration:2s}
-#authScreen:has(.auth-input:focus) .iris-core{transform:scale(1.25);box-shadow:0 0 12px #fff,0 0 32px #00e5ff}
-#authScreen:has(.auth-input:focus) .iris-lock:after{content:'SCANNING';color:#c8ffff}
-@keyframes irisSpin{to{transform:rotate(360deg)}}@keyframes irisSpinReverse{to{transform:rotate(-360deg)}}@keyframes irisPulse{0%,100%{opacity:.8;filter:brightness(.9)}50%{opacity:1;filter:brightness(1.5)}}@keyframes irisScan{0%,100%{transform:translateY(-22px);opacity:.15}50%{transform:translateY(22px);opacity:.9}}@keyframes irisHover{0%,100%{translate:0 0}50%{translate:0 -4px}}
-@media(prefers-reduced-motion:reduce){#authScreen .iris-lock,#authScreen .iris-orbit,#authScreen .iris-core,#authScreen .iris-scanline{animation:none!important}}
-</style>
+
 
 </head>
 
 
-<body class="auth-pending">
+<body class="auth-ready">
 
 
 
-<!-- =====================================================
-     SUPABASE LOGIN SCREEN
-===================================================== -->
-<section id="authScreen">
-  <div class="auth-card">
-    <div class="auth-logo iris-lock" aria-label="Holographic iris security lock" role="img">
-      <span class="iris-orbit orbit-one"></span><span class="iris-orbit orbit-two"></span>
-      <span class="iris-blade blade-one"></span><span class="iris-blade blade-two"></span><span class="iris-blade blade-three"></span><span class="iris-blade blade-four"></span><span class="iris-core"></span><span class="iris-scanline"></span>
-    </div>
-    <h1>Dr. Megha Dental</h1>
-    <p class="auth-subtitle">
-      Secure clinic access<br>
-      Sign in to open the Dental Clinic Management Dashboard.
-    </p>
-
-    <form id="authForm">
-      <div class="auth-form-group">
-        <label for="authEmail">EMAIL</label>
-        <input
-          id="authEmail"
-          class="auth-input"
-          type="email"
-          autocomplete="username"
-          inputmode="email"
-          placeholder="Enter your registered email"
-          required
-        >
-      </div>
-
-      <div class="auth-form-group">
-        <label for="authPassword">PASSWORD</label>
-        <div class="auth-password-wrap">
-          <input
-            id="authPassword"
-            class="auth-input"
-            type="password"
-            autocomplete="current-password"
-            placeholder="Enter your password"
-            required
-          >
-          <button type="button" class="auth-eye" id="authEye" aria-label="Show password">👁</button>
-        </div>
-      </div>
-
-      <label class="auth-remember">
-        <input id="rememberDevice" type="checkbox">
-        <span><strong>Remember this device</strong> (not enabled)</span>
-      </label>
-
-      <button class="auth-submit" id="authSubmit" type="submit">
-        SIGN IN
-      </button>
-
-      <div class="auth-message" id="authMessage" role="alert"></div>
-    </form>
-
-    <div class="auth-footer">
-      Protected by <span class="auth-clinic-name">Supabase Authentication</span>
-    </div>
-  </div>
-</section>
+<!-- No login screen in this local-only clone. -->
 
 <div class="app">
 
@@ -2792,13 +2569,6 @@ body.auth-pending .app{display:none !important;}
 
     </button>
 
-    <button
-        class="auth-logout"
-        type="button"
-        onclick="signOutClinic()"
-    >
-        ↪ Sign Out
-    </button>
 
 
 </aside>
@@ -3526,7 +3296,7 @@ body.auth-pending .app{display:none !important;}
       <p>Simple information about how this offline version works.</p>
       <div class="settings-row"><div><strong>Storage mode</strong><span>Local browser storage on this computer.</span></div><span class="settings-status">LOCAL</span></div>
       <div class="settings-row"><div><strong>Cloud sync</strong><span>Clinic records are still stored locally in this version; cloud database sync is not yet connected.</span></div><span style="font-size:9px;color:#7d879b;font-weight:700">OFF</span></div>
-      <div class="settings-row"><div><strong>Login / Authentication</strong><span>Supabase email/password authentication protects access to the application.</span></div><span class="settings-status">ON</span></div>
+      <div class="settings-row"><div><strong>Login / Authentication</strong><span>No app login in this clone. Anyone who opens the site can access the app interface.</span></div><span class="settings-status">OFF</span></div>
       <div class="settings-note">Authentication is enabled. Patient data is still stored in this browser until the database/cloud-sync stage is connected.</div>
     </section>
 
@@ -3932,7 +3702,6 @@ body.auth-pending .app{display:none !important;}
   </div>
 </div>
 
-<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
 <script>
 function toggleMenu(){document.getElementById("sidebar").classList.toggle("open");}
@@ -4574,130 +4343,12 @@ function mobileNavigation(button){
 
 
 <script>
-/* =========================================================
-   SUPABASE AUTHENTICATION GATE
-   Uses the browser-safe publishable key only.
-========================================================= */
-const SUPABASE_URL = "https://qxccztgwuhecwwtqiahz.supabase.co";
-const SUPABASE_PUBLISHABLE_KEY = "sb_publishable_5JPwPdxVUYDdz-1tytjfxA_RKagOuG6";
-const supabaseClient = window.supabase.createClient(
-  SUPABASE_URL,
-  SUPABASE_PUBLISHABLE_KEY,
-  { auth: { persistSession: false, autoRefreshToken: false, detectSessionInUrl: false } }
-);
-
-const authScreen = document.getElementById("authScreen");
-const authForm = document.getElementById("authForm");
-const authEmail = document.getElementById("authEmail");
-const authPassword = document.getElementById("authPassword");
-const authSubmit = document.getElementById("authSubmit");
-const authMessage = document.getElementById("authMessage");
-const authEye = document.getElementById("authEye");
-const rememberDevice = document.getElementById("rememberDevice");
-
-// Supabase keeps the authenticated session in browser storage by default.
-// Login fields start empty; credentials are never stored by this app.
-
-function setAuthMessage(message, success=false){
-  if(!authMessage) return;
-  authMessage.textContent = message || "";
-  authMessage.style.color = success ? "#7DE7C2" : "#FFB4B4";
+/* Clone version: Supabase authentication removed. */
+document.body.classList.remove("auth-pending");
+document.body.classList.add("auth-ready");
+function signOutClinic(){
+  alert("This clone has no sign-in system. Close the browser when finished.");
 }
-
-function showAuthenticatedApp(session){
-  document.body.classList.add("auth-ready");
-  document.body.classList.remove("auth-pending");
-  authScreen?.classList.add("auth-hidden");
-
-  const email = session?.user?.email || "";
-  const role = document.querySelector(".profile-role");
-  if(role && email) role.textContent = "Signed in";
-  const profileName = document.querySelector(".profile-name");
-  if(profileName) profileName.textContent = "Dr. Megha";
-}
-
-function showLoginScreen(){
-  document.body.classList.remove("auth-ready");
-  document.body.classList.add("auth-pending");
-  authScreen?.classList.remove("auth-hidden");
-  // Keep the login fields empty and wait for the user to interact.
-}
-
-async function checkClinicSession(){
-  try{
-    const {data:{session},error} = await supabaseClient.auth.getSession();
-    if(error) throw error;
-    if(session){
-      showAuthenticatedApp(session);
-    }else{
-      showLoginScreen();
-    }
-  }catch(error){
-    console.error("Supabase session error:",error);
-    showLoginScreen();
-    setAuthMessage("Unable to check login. Please refresh and try again.");
-  }
-}
-
-authForm?.addEventListener("submit", async function(event){
-  event.preventDefault();
-
-  const email = authEmail.value.trim();
-  const password = authPassword.value;
-
-  // Do not save login details; require the user to enter credentials.
-
-  if(!email || !password){
-    setAuthMessage("Please enter your email and password.");
-    return;
-  }
-
-  authSubmit.disabled = true;
-  authSubmit.textContent = "SIGNING IN...";
-  setAuthMessage("");
-
-  try{
-    const {data,error} = await supabaseClient.auth.signInWithPassword({
-      email,
-      password
-    });
-
-    if(error) throw error;
-
-    setAuthMessage("Login successful.",true);
-    showAuthenticatedApp(data.session);
-  }catch(error){
-    console.error("Supabase login error:",error);
-    setAuthMessage(error?.message || "Login failed. Please check your email and password.");
-  }finally{
-    authSubmit.disabled = false;
-    authSubmit.textContent = "SIGN IN";
-  }
-});
-
-authEye?.addEventListener("click",function(){
-  const isPassword = authPassword.type === "password";
-  authPassword.type = isPassword ? "text" : "password";
-  authEye.textContent = isPassword ? "🙈" : "👁";
-  authEye.setAttribute("aria-label",isPassword ? "Hide password" : "Show password");
-});
-
-async function signOutClinic(){
-  try{
-    const {error} = await supabaseClient.auth.signOut();
-    if(error) throw error;
-  }catch(error){
-    console.error("Supabase logout error:",error);
-    alert("Could not sign out. Please try again.");
-  }
-}
-
-supabaseClient.auth.onAuthStateChange((_event,session)=>{
-  if(session) showAuthenticatedApp(session);
-  else showLoginScreen();
-});
-
-checkClinicSession();
 </script>
 
 
