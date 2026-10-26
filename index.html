@@ -2391,10 +2391,46 @@ table td{border-bottom-color:rgba(0,191,255,.09) !important;color:#D7F1FA !impor
 
 
 
+
+<style id="demoLoginStyles">
+:root{--login-gold:#e8c77b;--login-gold-bright:#ffe7a0;--login-ink:#090b12;--login-panel:#111521;}
+#demoLoginOverlay{position:fixed;inset:0;z-index:99999;display:flex;align-items:center;justify-content:center;padding:22px;background:radial-gradient(ellipse at 50% 35%,rgba(123,91,35,.18),transparent 42%),linear-gradient(135deg,#070910 0%,#101522 55%,#080a10 100%);color:#f6f1e5;font-family:Montserrat,Arial,sans-serif;}
+#demoLoginOverlay[hidden]{display:none!important}
+.demo-login-card{width:min(430px,100%);padding:36px 32px 28px;border:1px solid rgba(232,199,123,.34);border-radius:26px;background:linear-gradient(145deg,rgba(22,27,40,.97),rgba(10,13,21,.98));box-shadow:0 0 0 1px rgba(232,199,123,.06),0 24px 80px rgba(0,0,0,.55),0 0 44px rgba(232,199,123,.09);position:relative;overflow:hidden}
+.demo-login-card:before{content:"";position:absolute;inset:0 18% auto;height:1px;background:linear-gradient(90deg,transparent,var(--login-gold),transparent);box-shadow:0 0 18px rgba(232,199,123,.65)}
+.demo-login-emblem{width:76px;height:76px;margin:0 auto 22px;border:1px solid rgba(232,199,123,.7);border-radius:23px;display:grid;place-items:center;color:var(--login-gold-bright);font-size:34px;background:radial-gradient(circle,rgba(232,199,123,.16),rgba(232,199,123,.02));box-shadow:0 0 28px rgba(232,199,123,.16),inset 0 0 20px rgba(232,199,123,.08)}
+.demo-login-eyebrow{text-align:center;font-size:9px;letter-spacing:3px;font-weight:800;color:var(--login-gold);text-transform:uppercase}
+.demo-login-card h1{text-align:center;font-size:25px;line-height:1.25;margin:10px 0 8px;color:#fff8e8;letter-spacing:-.5px}
+.demo-login-sub{text-align:center;font-size:11px;line-height:1.7;color:#a7adbd;margin-bottom:27px}
+.demo-login-field{margin:0 0 16px}.demo-login-field label{display:block;margin:0 0 8px 3px;font-size:9px;font-weight:800;letter-spacing:1.5px;color:#d6c79f}
+.demo-login-field input{display:block;width:100%;height:48px;border:1px solid #33394a;border-radius:12px;background:#0a0d15;color:#fff7e4;padding:0 14px;font:inherit;font-size:12px;outline:none;transition:border-color .2s,box-shadow .2s}
+.demo-login-field input:focus{border-color:var(--login-gold);box-shadow:0 0 0 3px rgba(232,199,123,.11),0 0 22px rgba(232,199,123,.08)}
+.demo-login-submit{width:100%;height:49px;border:1px solid #f0d48e;border-radius:12px;margin-top:7px;background:linear-gradient(100deg,#b58b3b,#f2d58d 48%,#c49b4a);color:#17120a;font:inherit;font-size:10px;font-weight:900;letter-spacing:2px;cursor:pointer;box-shadow:0 8px 25px rgba(210,171,82,.19);transition:transform .2s,filter .2s}
+.demo-login-submit:hover{filter:brightness(1.08);transform:translateY(-1px)}.demo-login-message{min-height:20px;margin-top:13px;text-align:center;font-size:10px;color:#ffaaaa;line-height:1.5}.demo-login-footer{text-align:center;margin-top:20px;padding-top:17px;border-top:1px solid rgba(255,255,255,.08);font-size:9px;color:#777f91;line-height:1.6}.demo-login-footer strong{color:#d9bd78;font-weight:700}
+@media(max-width:480px){.demo-login-card{padding:29px 22px 23px;border-radius:22px}.demo-login-card h1{font-size:22px}.demo-login-emblem{width:68px;height:68px;font-size:30px}}
+@media(prefers-reduced-motion:reduce){.demo-login-submit,.demo-login-field input{transition:none}}
+</style>
+
 </head>
 
 
 <body class="auth-ready">
+<section id="demoLoginOverlay" aria-label="Clinic demo login">
+  <div class="demo-login-card">
+    <div class="demo-login-emblem" aria-hidden="true">✦</div>
+    <div class="demo-login-eyebrow">PRIVATE CLINIC PORTAL</div>
+    <h1>Dr. Megha Dental</h1>
+    <p class="demo-login-sub">Welcome back.<br>Sign in to open your clinic dashboard.</p>
+    <form id="demoLoginForm" autocomplete="off">
+      <div class="demo-login-field"><label for="demoUsername">USERNAME</label><input id="demoUsername" name="username" type="text" autocomplete="username" placeholder="Enter username" required></div>
+      <div class="demo-login-field"><label for="demoPassword">PASSWORD</label><input id="demoPassword" name="password" type="password" autocomplete="current-password" placeholder="Enter password" required></div>
+      <button class="demo-login-submit" type="submit">SIGN IN <span aria-hidden="true">→</span></button>
+      <div id="demoLoginMessage" class="demo-login-message" role="alert" aria-live="polite"></div>
+    </form>
+    <div class="demo-login-footer">DARK CINEMATIC ACCESS<br><strong>DEMO LOGIN ONLY — NOT SECURITY FOR PATIENT DATA</strong></div>
+  </div>
+</section>
+
 
 
 
@@ -4342,13 +4378,33 @@ function mobileNavigation(button){
 </script>
 
 
-<script>
-/* Clone version: Supabase authentication removed. */
-document.body.classList.remove("auth-pending");
-document.body.classList.add("auth-ready");
-function signOutClinic(){
-  alert("This clone has no sign-in system. Close the browser when finished.");
+<script id="demoLoginLogic">
+/* Demo-only front-end gate. Credentials are visible in public source code.
+   This does NOT secure patient data. Existing app/localStorage logic is untouched. */
+const DEMO_USERNAME = "megha";
+const DEMO_PASSWORD = "dental13";
+const demoLoginOverlay = document.getElementById("demoLoginOverlay");
+const demoLoginForm = document.getElementById("demoLoginForm");
+const demoLoginMessage = document.getElementById("demoLoginMessage");
+function showDemoLogin(){
+  if(demoLoginOverlay) demoLoginOverlay.hidden = false;
+  const p = document.getElementById("demoPassword"); if(p) p.value = "";
+  const u = document.getElementById("demoUsername"); if(u) u.value = "";
+  if(demoLoginMessage) demoLoginMessage.textContent = "";
 }
+function hideDemoLogin(){ if(demoLoginOverlay) demoLoginOverlay.hidden = true; }
+demoLoginForm?.addEventListener("submit",function(event){
+  event.preventDefault();
+  const username = document.getElementById("demoUsername").value.trim();
+  const password = document.getElementById("demoPassword").value;
+  if(username === DEMO_USERNAME && password === DEMO_PASSWORD){
+    hideDemoLogin();
+  }else if(demoLoginMessage){
+    demoLoginMessage.textContent = "Incorrect username or password. Please try again.";
+  }
+});
+function signOutClinic(){ showDemoLogin(); }
+showDemoLogin();
 </script>
 
 
